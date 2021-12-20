@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pares e Ímpares</title>
+    <link rel="stylesheet" href="syle.css">
+</head>
+<body>
+    <form onsubmit="event.preventDefault(); enviar();">
+        <label>
+            <span>Digite um número:</span>
+            <input id="numero1" type="text" name="numero1">
+
+            <span>Digite um número:</span>
+            <input id="numero2" type="text" name="numero2">
+            <button>Enviar</button>
+        </label>
+    </form>
+    <button onsubmit="event.preventDefault(); calcularNum();">Somar</button>
+    <div id="lacuna"></div>
+<script>
+    function enviar(){
+        let num1 = document.querySelector('#numero1');
+        let numero1 = parseInt(num1.value);
+        let num2 = document.querySelector('#numero2');
+        let numero2 = parseInt(num2.value);
+        divLacuna = document.querySelector('#lacuna');
+        let soma = numero2 + numero1;
+        
+        console.log(soma);
+
+        let numero = calcularNum(soma);
+        
+        divNumeros = document.createElement('div');
+        divLacuna.append(div);
+        div.classList.add(style);
+
+        let style;
+        if(num1 % !! 0){
+            style = 'par'; 
+        }
+        else{
+            style = 'impar';
+        }
+
+    }
+
+    function calcularNum(){
+        numero.textContent(soma);
+        return numero;
+    }
+
+
+</script>
+</body>
+</html>
